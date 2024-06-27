@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <div class="header__logo">
+          LOREMIPSUM.<span class="header__logo-highlight">NET</span>
+        </div>
+        <button class="header__hamburger" onclick="toggleMenu()">
+          &#9776;
+        </button>
+        <ul class="header__menu" id="header-menu">
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">БИЗНЕС</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">О НАС</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">ЦЕНЫ</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">ОФОРМИТЬ ЗАКАЗ</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="hero__title-highlight">LOREM IPSUM</span> DOLOR SIT
+            AMETCONSECTETUR
+            <span class="hero__title-highlight">ADIPISCING</span>
+          </h1>
+          <p class="hero__description">
+            At vero eos et accusamus et iusto odio dignissimos ducimus!
+          </p>
+          <ul class="hero__list">
+            <li class="hero__list-item">Totam rem aperiam eaque ipsa</li>
+            <li class="hero__list-item">
+              Sit voluptatem accusantium doloremque laudantium
+            </li>
+            <li class="hero__list-item">
+              Sed ut perspiciatis, unde omnis iste natus error
+            </li>
+          </ul>
+          <div class="hero__buttons">
+            <button class="hero__button hero__button--primary">ЗАКАЗАТЬ</button>
+            <button class="hero__button hero__button--secondary">
+              ПОДРОБНЕЕ
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="form-section">
+        <h2 class="form-section__title">
+          ОФОРМЛЕНИЕ <span class="form-section__title-highlight">ЗАКАЗА</span>
+        </h2>
+        <p class="form-section__description">
+          Перед заполнением формы ознакомьтесь с нашей схемой работы!
+        </p>
+        <div class="form-section__steps">
+          <div class="form-section__step">
+            <div class="form-section__icon-circle">
+              <img src="public/search.png" alt="Search" />
+            </div>
+            <p>Lorem Ipsum dolor sit amet</p>
+          </div>
+          <div class="form-section__step">
+            <div class="form-section__icon-circle">
+              <img src="public/percent.png" alt="Percent" />
+            </div>
+            <p>Consecteturadipiscing elit</p>
+          </div>
+          <div class="form-section__step">
+            <div class="form-section__icon-circle">
+              <img src="public/Subtract.png" alt="Document" />
+            </div>
+            <p>Sed do eiusmod tempor</p>
+          </div>
+          <div class="form-section__step">
+            <div class="form-section__icon-circle">
+              <img src="public/email.png" alt="Email" />
+            </div>
+            <p>Esse cillum dolore eu fugiat</p>
+          </div>
+          <div class="form-section__step">
+            <div class="form-section__icon-circle">
+              <img src="public/money.png" alt="Money" />
+            </div>
+            <p>Excepteur sint occaecat cupidatat non proident</p>
+          </div>
+        </div>
+        <form class="form-section__form">
+          <div class="form-section__row">
+            <select name="system_type" class="form-section__input">
+              <option value="" disabled selected>Выберите тип системы</option>
+              <!-- Add options here -->
+            </select>
+            <input
+              type="email"
+              name="email"
+              placeholder="Ваш e-mail"
+              class="form-section__input"
+            />
+            <input
+              type="text"
+              name="name"
+              placeholder="Ваше имя"
+              class="form-section__input"
+            />
+          </div>
+          <div class="form-section__row">
+            <div class="form-section__slider-container">
+              <input type="range" class="form-section__slider" value="75" />
+              <span>75%</span>
+            </div>
+            <label class="form-section__file-upload">
+              <img src="public/doc.png" alt="" />
+              <input type="file" name="file" />
+              <span>ПРИКРЕПИТЬ ФАЙЛ</span>
+            </label>
+          </div>
+          <button type="submit" class="form-section__button">ОТПРАВИТЬ</button>
+        </form>
+      </section>
+      <section class="testimonials">
+        <h2 class="testimonials__title">Отзывы</h2>
+        <div class="testimonials__slider">
+          <div class="testimonial">
+            <p class="testimonial__text">
+              "Это лучший сервис, которым я когда-либо пользовался!"
+            </p>
+            <p class="testimonial__author">- Иван Иванов</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial__text">
+              "Высокое качество и отличная поддержка."
+            </p>
+            <p class="testimonial__author">- Мария Петрова</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial__text">"Рекомендую всем!"</p>
+            <p class="testimonial__author">- Алексей Смирнов</p>
+          </div>
+        </div>
+        <button
+          class="testimonials__button testimonials__button--prev"
+          onclick="prevSlide()"
+        >
+          &#10094;
+        </button>
+        <button
+          class="testimonials__button testimonials__button--next"
+          onclick="nextSlide()"
+        >
+          &#10095;
+        </button>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__left">
+          <p>© 2018 «LOREMIPSUM.NET» Все права защищены.</p>
+        </div>
+        <div class="border"></div>
+        <div class="footer__center">
+          <div class="footer__payment">
+            <img src="public/kiwi.png" alt="QIWI wallet" />
+            <span>QIWI wallet</span>
+          </div>
+          <div class="footer__payment">
+            <img src="public/yaMoney.png" alt="Yandex Money" />
+            <span>Yandex Money</span>
+          </div>
+          <div class="footer__payment">
+            <img src="public/web_money.png" alt="Web Money" />
+            <span>Web Money</span>
+          </div>
+        </div>
+        <div class="border"></div>
+        <div class="footer__right">
+          <img src="public/blue_email.png" alt="blue email" />
+          <a href="mailto:info@ipsum228.com" class="footer__contact-link"
+            >info@ipsum228.com</a
+          >
+          <img src="public/vk.png" alt="vk" />
+          <a href="https://vk.com" class="footer__social-link">Мы вконтакте</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
